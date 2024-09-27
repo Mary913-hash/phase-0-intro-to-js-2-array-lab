@@ -1,40 +1,34 @@
-// Write your solution here!
-let cats = ["Milo", "Otis", "Garfield"];
+let cats = ["Milo", "Otis", "Garfield"]
 
-function destructivelyAppendCat (name) {
-    cats.push("Ralph")
-}
-function destructivelyPrependCat(name){
-    cats.unshift("Bob")
-}
-function destructivelyRemoveLastCat(){
-    cats.pop()
-}
-function destructivelyRemoveFirstCat(){
-    cats.shift()
-}
-function appendCat(name){
-  const newCats = cats.slice();
-  newCats.push("Broom");
-  return newCats;
+function destructivelyAppendCat(Ralph) { 
+     cats.push(Ralph);
 }
 
-function prependCat(name) {
-    const newCats = cats.slice();
-    newCats.unshift("Arnold");
-    return newCats;
+function destructivelyPrependCat(Bob) { 
+   cats.unshift(Bob);
 }
-function removeLastCat(){
-    newCats = cats.slice();
-    newCats.pop();
-    return newCats;
+
+function destructivelyRemoveLastCat() { 
+    cats.pop();
 }
-function removeFirstCat(){
-    const newCats = cats.slice();
-    newCats.shift();
-    return newCats;
+
+function destructivelyRemoveFirstCat(){ 
+    cats.shift();
 }
+function appendCat(Broom) { 
+    let newCats = [...cats, Broom]
+    return newCats
+}
+function prependCat(Arnold) { 
+    let newCats = [Arnold, ...cats]
+    return newCats
+}
+
 function removeLastCat() {
-    let newCats = cats.slice(0, -1); // Create a new array excluding the last element
-    return newCats;
+    return cats.slice(0, cats.length - 1);
 }
+function removeFirstCat() { 
+    return cats.slice(1);
+}
+
+
